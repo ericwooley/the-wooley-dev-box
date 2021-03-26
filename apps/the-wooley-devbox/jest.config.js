@@ -1,10 +1,10 @@
 module.exports = {
-  displayName: 'the-wooley-box',
+  displayName: 'the-wooley-devbox',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/the-wooley-box',
+  coverageDirectory: '../../coverage/apps/the-wooley-devbox',
 };

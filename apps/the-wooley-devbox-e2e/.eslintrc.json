@@ -5,7 +5,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": "apps/the-wooley-box-e2e/tsconfig.*?.json"
+        "project": "apps/the-wooley-devbox-e2e/tsconfig.*?.json"
       },
       "rules": {}
     },

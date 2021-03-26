@@ -23,12 +23,12 @@
     }
   },
   "projects": {
-    "the-wooley-box": {
+    "the-wooley-devbox": {
       "tags": []
     },
-    "the-wooley-box-e2e": {
+    "the-wooley-devbox-e2e": {
       "tags": [],
-      "implicitDependencies": ["the-wooley-box"]
+      "implicitDependencies": ["the-wooley-devbox"]
     }
   }
 }
