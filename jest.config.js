@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/the-wooley-devbox'],
+  projects: ['<rootDir>/apps/web'],
 };

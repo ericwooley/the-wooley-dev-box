@@ -13,7 +13,7 @@
   "affected": {
     "defaultBase": "master"
   },
-  "npmScope": "the-wooley-devbox",
+  "npmScope": "web",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
@@ -23,12 +23,12 @@
     }
   },
   "projects": {
-    "the-wooley-devbox": {
+    "web": {
       "tags": []
     },
-    "the-wooley-devbox-e2e": {
+    "web-e2e": {
       "tags": [],
-      "implicitDependencies": ["the-wooley-devbox"]
+      "implicitDependencies": ["web"]
     }
   }
 }
