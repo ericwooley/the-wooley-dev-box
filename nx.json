@@ -13,7 +13,7 @@
   "affected": {
     "defaultBase": "master"
   },
-  "npmScope": "web",
+  "npmScope": "the-wooley-devbox",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
