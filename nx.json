@@ -20,6 +20,7 @@
   "projects": {
     "web": { "tags": [] },
     "web-e2e": { "tags": [], "implicitDependencies": ["web"] },
-    "api": { "tags": [] }
+    "api": { "tags": [] },
+    "graphql": { "tags": [] }
   }
 }
