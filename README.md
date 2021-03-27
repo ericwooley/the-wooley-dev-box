@@ -3,6 +3,8 @@
 * [TheWooleyDevbox](#thewooleydevbox)
     * [Pre-requisites](#pre-requisites)
 * [Part 1: Setup with NX](#part-1-setup-with-nx)
+* [Part 2](#part-2)
+    * [Adding Type GraphQL](#adding-type-graphql)
 # TheWooleyDevbox
 With the web development world coming to grips with the benefits of type safety, it can be cumbersome to maintain type parity between your front end clients and back end services.
 
@@ -82,3 +84,27 @@ The comments show what and where each folder is and does, but lets examine a cou
 4.  apps - While using NX, think of apps as entry points into your code. In our example, we only have one app: the-wooley-box, which is our nextjs frontend. Think of applications like glue for your libs.
 
 5.  apps/web - this is our frontend nextjs application. workspace.json has an entry for web, as well as commands for interacting with it. When we run `yarn start`, we are actually running `nx serve web`
+
+
+
+# Part 2
+
+
+### Adding Type GraphQL
+```bash
+➜ tree libs
+libs
+└── graphql # newly generated graphql lib
+    ├── jest.config.js
+    ├── README.md
+    ├── src # all files must be in here
+    │   ├── index.ts # re-export everything you want to use in other libs
+    │   └── lib # where our code will go
+    │       ├── graphql.spec.ts # boilerplate spec
+    │       └── graphql.ts # boilerplate file
+    ├── tsconfig.json # tsconfig that extends teh one from our root
+    ├── tsconfig.lib.json # tsconfig that applies to our source files
+    └── tsconfig.spec.json # tsconfig that only applies to spec files.
+
+3 directories, 8 files
+```
