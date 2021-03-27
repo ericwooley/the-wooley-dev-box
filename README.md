@@ -47,7 +47,28 @@ Getting started with nx is probably the easiest part of this whole process. In y
 npx --ignore-existing create-nx-workspace web --preset=next
 ```
 
-[![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_lossy/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5ddfdb72-71f0-4879-bbb7-20c7dc757647_1280x720.gif)](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5ddfdb72-71f0-4879-bbb7-20c7dc757647_1280x720.gif)
+```bash
+$ tree -I 'node_modules|.git' .
+ ├── apps # apps glue our libs together
+ │   ├── the-wooley-devbox # Our NextJS app
+ │   │   ├── index.d.ts # Custom Types for SVG
+ │   │   ├── jest.config.js # app specific jest config
+ │   │   ├── next.config.js # use this to customize next
+ │   │   ├── pages   # nextJS pages https://nextjs.org/docs/basic-features/pages
+ │   │   ├── public # static files https://nextjs.org/docs/basic-features/static-file-serving
+ │   │   ├── specs # Jest Tests
+ │   │   ├── tsconfig.json # project specific tsconfig file, excludes spec files.
+ │   │   └── tsconfig.spec.json # ts config which includes spec files.
+ │   └── the-wooley-devbox-e2e # cypress tests, which we will not get into https://nx.dev/latest/react/nx-plugin/e2e#e2e
+ ├── babel.config.json
+ ├── jest.config.js # nx jest config file
+ ├── jest.preset.js # nx jest preset file
+ ├── libs # all our shared code will eventually go in here.
+ ├── nx.json # https://nx.dev/latest/react/getting-started/configuration#nx-json
+ ├── tools # scripts that act on your code base
+ ├── tsconfig.base.json # base tsconfig, which applies to all TS files.
+ └──  workspace.json # https://nx.dev/latest/react/getting-started/configuration#workspace-json
+```
 
 
 The comments show what and where each folder is and does, but lets examine a couple that might be new to you. There is also [official NX docs for the folder structure](https://nx.dev/latest/react/getting-started/folder-structure#files).
