@@ -8,14 +8,14 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2018",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2018", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@web/graphql": ["libs/graphql/src/index.ts"]
+      "@the-wooley-devbox/graphql": ["libs/graphql/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

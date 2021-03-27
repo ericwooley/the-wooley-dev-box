@@ -1,25 +1,19 @@
 import 'reflect-metadata';
 import * as express from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
+import { resolvers } from '@the-wooley-devbox/graphql';
+import { buildSchema } from 'type-graphql';
 (async () => {
   const app = express();
   app.get('/api', (req, res) => {
     res.send({ message: 'Welcome to api!' });
   });
   const port = process.env.port || 3333;
-  // Construct a schema, using GraphQL schema language
-  const typeDefs = gql`
-    type Query {
-      hello: String
-    }
-  `;
-  // Provide resolver functions for your schema fields
-  const resolvers = {
-    Query: {
-      hello: () => 'Hello world!',
-    },
-  };
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const schema = await buildSchema({
+    resolvers,
+  });
+
+  const server = new ApolloServer({ schema });
   await server.start();
   server.applyMiddleware({ app, path: '/graphql' });
 
