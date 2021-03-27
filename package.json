@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
+    "start": "concurrently --names 'api,web' -c 'bgBlue.bold,bgMagenta.bold' 'nx serve api' 'nx serve web'",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
@@ -61,6 +61,7 @@
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "babel-jest": "26.2.2",
+    "concurrently": "^6.0.0",
     "cypress": "^6.0.1",
     "dotenv": "8.2.0",
     "eslint": "7.10.0",
