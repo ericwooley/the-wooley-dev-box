@@ -23,6 +23,7 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
+    "typeorm": "ts-node -P ./tsconfig.base.json -O '{\"module\": \"commonjs\", \"experimentalDecorators\": true}' -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config ormconfig.js",
     "help": "nx help"
   },
   "private": true,
