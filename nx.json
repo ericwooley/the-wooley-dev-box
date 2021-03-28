@@ -7,9 +7,7 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "the-wooley-devbox",
   "tasksRunnerOptions": {
     "default": {
@@ -21,6 +19,7 @@
     "web": { "tags": [] },
     "web-e2e": { "tags": [], "implicitDependencies": ["web"] },
     "api": { "tags": [] },
-    "graphql": { "tags": [] }
+    "graphql": { "tags": [] },
+    "db": { "tags": [] }
   }
 }
