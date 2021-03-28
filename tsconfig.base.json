@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@the-wooley-devbox/graphql": ["libs/graphql/src/index.ts"],
-      "@the-wooley-devbox/db": ["libs/db/src/index.ts"]
+      "@the-wooley-devbox/db": ["libs/db/src/index.ts"],
+      "@the-wooley-devbox/graphql-sdk": ["libs/graphql-sdk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

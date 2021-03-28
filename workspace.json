@@ -211,6 +211,21 @@
           }
         }
       }
+    },
+    "graphql-sdk": {
+      "root": "libs/graphql-sdk",
+      "sourceRoot": "libs/graphql-sdk/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/graphql-sdk/**/*.ts"
+            ]
+          }
+        }
+      }
     }
   }
 }
