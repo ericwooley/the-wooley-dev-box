@@ -18,7 +18,17 @@ export type List = {
   __typename?: 'List';
   id: Scalars['ID'];
   name: Scalars['String'];
-  items: Array<TodoItem>;
+  items?: Maybe<Array<TodoItem>>;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  createList: List;
+};
+
+
+export type MutationCreateListArgs = {
+  name: Scalars['String'];
 };
 
 export type Query = {
@@ -42,11 +52,28 @@ export type MyListsQuery = (
   & { myLists: Array<(
     { __typename?: 'List' }
     & Pick<List, 'id' | 'name'>
-    & { items: Array<(
+    & { items?: Maybe<Array<(
       { __typename?: 'TodoItem' }
       & Pick<TodoItem, 'id' | 'name' | 'done'>
-    )> }
+    )>> }
   )> }
+);
+
+export type CreateListMutationVariables = Exact<{
+  name: Scalars['String'];
+}>;
+
+
+export type CreateListMutation = (
+  { __typename?: 'Mutation' }
+  & { createList: (
+    { __typename?: 'List' }
+    & Pick<List, 'id' | 'name'>
+    & { items?: Maybe<Array<(
+      { __typename?: 'TodoItem' }
+      & Pick<TodoItem, 'name' | 'id' | 'done'>
+    )>> }
+  ) }
 );
 
 
@@ -90,3 +117,42 @@ export function useMyListsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<My
 export type MyListsQueryHookResult = ReturnType<typeof useMyListsQuery>;
 export type MyListsLazyQueryHookResult = ReturnType<typeof useMyListsLazyQuery>;
 export type MyListsQueryResult = Apollo.QueryResult<MyListsQuery, MyListsQueryVariables>;
+export const CreateListDocument = gql`
+    mutation createList($name: String!) {
+  createList(name: $name) {
+    id
+    name
+    items {
+      name
+      id
+      done
+    }
+  }
+}
+    `;
+export type CreateListMutationFn = Apollo.MutationFunction<CreateListMutation, CreateListMutationVariables>;
+
+/**
+ * __useCreateListMutation__
+ *
+ * To run a mutation, you first call `useCreateListMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateListMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createListMutation, { data, loading, error }] = useCreateListMutation({
+ *   variables: {
+ *      name: // value for 'name'
+ *   },
+ * });
+ */
+export function useCreateListMutation(baseOptions?: Apollo.MutationHookOptions<CreateListMutation, CreateListMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<CreateListMutation, CreateListMutationVariables>(CreateListDocument, options);
+      }
+export type CreateListMutationHookResult = ReturnType<typeof useCreateListMutation>;
+export type CreateListMutationResult = Apollo.MutationResult<CreateListMutation>;
+export type CreateListMutationOptions = Apollo.BaseMutationOptions<CreateListMutation, CreateListMutationVariables>;
