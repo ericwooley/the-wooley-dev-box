@@ -1,0 +1,11 @@
+query myLists {
+  myLists {
+    id
+    name
+    items {
+      id
+      name
+      done
+    }
+  }
+}
