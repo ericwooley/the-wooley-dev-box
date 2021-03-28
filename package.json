@@ -29,6 +29,7 @@
   },
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.3.13",
     "apollo-server-express": "^2.22.1",
     "class-validator": "^0.13.1",
     "core-js": "^3.6.5",
@@ -51,6 +52,9 @@
     "@babel/preset-react": "7.9.4",
     "@babel/preset-typescript": "7.9.0",
     "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-operations": "1.17.15",
+    "@graphql-codegen/typescript-react-apollo": "2.2.3",
     "@nrwl/cli": "11.5.2",
     "@nrwl/cypress": "11.5.2",
     "@nrwl/eslint-plugin-nx": "11.5.2",
@@ -86,9 +90,6 @@
     "prettier": "2.2.1",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
-    "typescript": "~4.0.3",
-    "@graphql-codegen/typescript-react-apollo": "2.2.3",
-    "@graphql-codegen/typescript-operations": "1.17.15",
-    "@graphql-codegen/typescript": "1.21.1"
+    "typescript": "~4.0.3"
   }
 }

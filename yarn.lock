@@ -90,7 +90,7 @@
     ora "5.3.0"
     rxjs "6.6.3"
 
-"@apollo/client@^3.2.5":
+"@apollo/client@^3.2.5", "@apollo/client@^3.3.13":
   version "3.3.13"
   resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.13.tgz#0aadde13b80ce129d1261161413a9de2b0dec70e"
   integrity sha512-usiVmXiOq0J/GpyIOIhlF8ItHpiPJObC7zoxLYPoOYj3G3OB0hCIcUKs3aTJ3ATW7u8QxvYgRaJg72NN7E1WOg==
