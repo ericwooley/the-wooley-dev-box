@@ -1,4 +1,4 @@
-import { Query, Resolver } from 'type-graphql';
+import { Mutation, Query, Resolver, Arg } from 'type-graphql';
 import { List } from '@the-wooley-devbox/db';
 import { getManager } from 'typeorm';
 @Resolver()
@@ -10,5 +10,16 @@ export class ListResolver {
     const manager = getManager();
     // return all lists
     return await manager.find(List);
+  }
+
+  @Mutation(() => List)
+  async createList(@Arg('name') name: string): Promise<List> {
+    const list = new List();
+    list.name = name;
+    list.items = [];
+
+    const manager = getManager();
+    await manager.save(list);
+    return list;
   }
 }

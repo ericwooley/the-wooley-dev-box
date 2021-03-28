@@ -13,7 +13,7 @@ export class List {
   @Column()
   name: string;
 
-  @Field(() => [TodoItem])
+  @Field(() => [TodoItem], { nullable: true })
   @OneToMany(() => TodoItem, (item) => item.list)
   items: Promise<TodoItem[]>;
 }
