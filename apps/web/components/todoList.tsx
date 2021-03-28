@@ -6,14 +6,27 @@ export const TodoList = () => {
   if (error)
     return (
       <h3>
-        Uh oh, something went wrong{' '}
+        Uh oh, something went wrong!
+        <hr />
         <button onClick={() => refetch()}>Try again</button>
       </h3>
     );
   return (
     <div>
       <h3>My Lists ({`${data.myLists.length}`}):</h3>
-      <pre>{JSON.stringify(data.myLists, null, 2)}</pre>
+      {data.myLists.length === 0}{' '}
+      <h4>Looks like you don't have any lists yet.</h4>
+      {data.myLists.map((list) => (
+        <div key={list.id}>
+          {list.items.map((todo) => (
+            <div key={todo.id}>
+              <input type="checkbox" checked={todo.done} />
+              &nbsp;
+              <strong>{todo.name}</strong>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };
