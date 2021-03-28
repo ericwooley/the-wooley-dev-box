@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import 'graphql';
 import * as express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { resolvers } from '@the-wooley-devbox/graphql';
@@ -18,10 +19,13 @@ import { List, TodoItem } from '@the-wooley-devbox/db';
     entities: [List, TodoItem],
   });
   const app = express();
+  setInterval(() => {
+    console.log('running', new Date().toISOString());
+  }, 1000);
   app.get('/api', (req, res) => {
     res.send({ message: 'Welcome to api!' });
   });
-  const port = process.env.port || 3333;
+  const port = process.env.PORT || 3333;
   const schema = await buildSchema({
     resolvers,
     validate: false,
