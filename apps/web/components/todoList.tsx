@@ -1,6 +1,10 @@
 import React from 'react';
-import { useMyListsQuery } from '@the-wooley-devbox/graphql-sdk';
+import {
+  useMyListsQuery,
+  useCreateListMutation,
+} from '@the-wooley-devbox/graphql-sdk';
 export const TodoList = () => {
+  const [createList] = useCreateListMutation();
   const { data, loading, error, refetch } = useMyListsQuery({ ssr: false });
   if (loading) return <h3>Loading...</h3>;
   if (error)
@@ -13,7 +17,21 @@ export const TodoList = () => {
     );
   return (
     <div>
-      <h3>My Lists ({`${data.myLists.length}`}):</h3>
+      <h3>
+        My Lists ({`${data.myLists.length}`}){' '}
+        <button
+          onClick={() => {
+            createList({
+              variables: {
+                name: prompt('What do you want to name your list?'),
+              },
+            }).then(() => refetch());
+          }}
+        >
+          +
+        </button>
+        :
+      </h3>
       {data.myLists.length === 0}{' '}
       <h4>Looks like you don't have any lists yet.</h4>
       {data.myLists.map((list) => (
