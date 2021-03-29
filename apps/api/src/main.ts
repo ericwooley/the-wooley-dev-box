@@ -8,6 +8,7 @@ import { List, TodoItem } from '@the-wooley-devbox/db';
 (async () => {
   // connect to database, before we bootstrap the app.
   await createConnection({
+    logging: process.env.NODE_ENV === 'development',
     type: 'postgres',
     host: 'localhost',
     port: 5432,

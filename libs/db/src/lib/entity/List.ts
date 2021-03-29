@@ -20,6 +20,6 @@ export class List {
   name: string;
 
   @Field(() => [TodoItem], { nullable: true })
-  @OneToMany(() => TodoItem, (item) => item.list)
+  @OneToMany(() => TodoItem, (item) => item.list, {})
   items: Promise<TodoItem[]>;
 }
