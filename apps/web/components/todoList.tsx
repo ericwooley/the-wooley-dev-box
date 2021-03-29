@@ -6,7 +6,7 @@ import {
 export const TodoList = () => {
   const [createList] = useCreateListMutation();
   const { data, loading, error, refetch } = useMyListsQuery({ ssr: false });
-  if (loading) return <h3>Loading...</h3>;
+  if (loading || !data) return <h3>Loading...</h3>;
   if (error)
     return (
       <h3>
@@ -23,7 +23,9 @@ export const TodoList = () => {
           onClick={() => {
             createList({
               variables: {
-                name: prompt('What do you want to name your list?'),
+                name:
+                  prompt('What do you want to name your list?') ||
+                  'Untitled List',
               },
             }).then(() => refetch());
           }}
@@ -32,11 +34,13 @@ export const TodoList = () => {
         </button>
         :
       </h3>
-      {data.myLists.length === 0}{' '}
-      <h4>Looks like you don't have any lists yet.</h4>
+      {data.myLists.length === 0 && (
+        <h4>Looks like you don't have any lists yet.</h4>
+      )}
       {data.myLists.map((list) => (
         <div key={list.id}>
-          {list.items.map((todo) => (
+          <h4>{list.name}</h4>
+          {list.items?.map((todo) => (
             <div key={todo.id}>
               <input type="checkbox" checked={todo.done} />
               &nbsp;
