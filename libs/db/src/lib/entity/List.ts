@@ -15,5 +15,5 @@ export class List {
 
   @Field(() => [TodoItem])
   @OneToMany(() => TodoItem, (item) => item.list)
-  items: TodoItem[];
+  items: Promise<TodoItem[]>;
 }
