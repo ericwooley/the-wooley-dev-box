@@ -44,24 +44,29 @@ export const TodoList = () => {
       {data.myLists.map((list) => (
         <div key={list.id}>
           <h4>{list.name} </h4>
-          {list.items?.map((todo) => (
-            <div key={todo.id}>
-              <input
-                type="checkbox"
-                checked={todo.done}
-                onChange={(e) => {
-                  toggleTodoItem({
-                    variables: {
-                      done: e.target.checked,
-                      todoId: parseInt(todo.id, 10),
-                    },
-                  }).then(() => refetch());
-                }}
-              />
-              &nbsp;
-              <strong>{todo.name}</strong>
-            </div>
-          ))}
+          {list.items
+            ?.slice()
+            .sort((a, b) => {
+              return parseInt(a.id, 10) - parseInt(b.id, 10);
+            })
+            .map((todo) => (
+              <div key={todo.id}>
+                <input
+                  type="checkbox"
+                  checked={todo.done}
+                  onChange={(e) => {
+                    toggleTodoItem({
+                      variables: {
+                        done: e.target.checked,
+                        todoId: parseInt(todo.id, 10),
+                      },
+                    }).then(() => refetch());
+                  }}
+                />
+                &nbsp;
+                <strong>{todo.name}</strong>
+              </div>
+            ))}
           <button
             onClick={() => {
               addTodoItem({
