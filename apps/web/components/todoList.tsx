@@ -2,9 +2,11 @@ import React from 'react';
 import {
   useMyListsQuery,
   useCreateListMutation,
+  useAddTodoItemMutation,
 } from '@the-wooley-devbox/graphql-sdk';
 export const TodoList = () => {
   const [createList] = useCreateListMutation();
+  const [addTodoItem] = useAddTodoItemMutation();
   const { data, loading, error, refetch } = useMyListsQuery({ ssr: false });
   if (loading || !data) return <h3>Loading...</h3>;
   if (error)
@@ -39,7 +41,7 @@ export const TodoList = () => {
       )}
       {data.myLists.map((list) => (
         <div key={list.id}>
-          <h4>{list.name}</h4>
+          <h4>{list.name} </h4>
           {list.items?.map((todo) => (
             <div key={todo.id}>
               <input type="checkbox" checked={todo.done} />
@@ -47,6 +49,21 @@ export const TodoList = () => {
               <strong>{todo.name}</strong>
             </div>
           ))}
+          <button
+            onClick={() => {
+              addTodoItem({
+                variables: {
+                  listId: parseInt(list.id, 10),
+                  todoName:
+                    prompt('What do you want to name your todo?') ||
+                    'Untitled Todo',
+                },
+              }).then(() => refetch());
+            }}
+          >
+            + Add Todo Item
+          </button>
+          <hr />
         </div>
       ))}
     </div>
