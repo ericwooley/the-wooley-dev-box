@@ -25,6 +25,7 @@ export type Mutation = {
   __typename?: 'Mutation';
   createList: List;
   addTodoItem: List;
+  toggleTodoItem: TodoItem;
 };
 
 
@@ -36,6 +37,12 @@ export type MutationCreateListArgs = {
 export type MutationAddTodoItemArgs = {
   todoName: Scalars['String'];
   listId: Scalars['Float'];
+};
+
+
+export type MutationToggleTodoItemArgs = {
+  done: Scalars['Boolean'];
+  todoId: Scalars['Float'];
 };
 
 export type Query = {
@@ -94,6 +101,20 @@ export type AddTodoItemMutation = (
   & { addTodoItem: (
     { __typename?: 'List' }
     & Pick<List, 'id' | 'name'>
+  ) }
+);
+
+export type ToggleTodoItemMutationVariables = Exact<{
+  todoId: Scalars['Float'];
+  done: Scalars['Boolean'];
+}>;
+
+
+export type ToggleTodoItemMutation = (
+  { __typename?: 'Mutation' }
+  & { toggleTodoItem: (
+    { __typename?: 'TodoItem' }
+    & Pick<TodoItem, 'id' | 'name' | 'done'>
   ) }
 );
 
@@ -212,3 +233,39 @@ export function useAddTodoItemMutation(baseOptions?: Apollo.MutationHookOptions<
 export type AddTodoItemMutationHookResult = ReturnType<typeof useAddTodoItemMutation>;
 export type AddTodoItemMutationResult = Apollo.MutationResult<AddTodoItemMutation>;
 export type AddTodoItemMutationOptions = Apollo.BaseMutationOptions<AddTodoItemMutation, AddTodoItemMutationVariables>;
+export const ToggleTodoItemDocument = gql`
+    mutation toggleTodoItem($todoId: Float!, $done: Boolean!) {
+  toggleTodoItem(todoId: $todoId, done: $done) {
+    id
+    name
+    done
+  }
+}
+    `;
+export type ToggleTodoItemMutationFn = Apollo.MutationFunction<ToggleTodoItemMutation, ToggleTodoItemMutationVariables>;
+
+/**
+ * __useToggleTodoItemMutation__
+ *
+ * To run a mutation, you first call `useToggleTodoItemMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useToggleTodoItemMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [toggleTodoItemMutation, { data, loading, error }] = useToggleTodoItemMutation({
+ *   variables: {
+ *      todoId: // value for 'todoId'
+ *      done: // value for 'done'
+ *   },
+ * });
+ */
+export function useToggleTodoItemMutation(baseOptions?: Apollo.MutationHookOptions<ToggleTodoItemMutation, ToggleTodoItemMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ToggleTodoItemMutation, ToggleTodoItemMutationVariables>(ToggleTodoItemDocument, options);
+      }
+export type ToggleTodoItemMutationHookResult = ReturnType<typeof useToggleTodoItemMutation>;
+export type ToggleTodoItemMutationResult = Apollo.MutationResult<ToggleTodoItemMutation>;
+export type ToggleTodoItemMutationOptions = Apollo.BaseMutationOptions<ToggleTodoItemMutation, ToggleTodoItemMutationVariables>;

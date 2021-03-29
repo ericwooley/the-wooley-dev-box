@@ -28,3 +28,11 @@ mutation addTodoItem($listId: Float!, $todoName: String!) {
     name
   }
 }
+
+mutation toggleTodoItem($todoId: Float!, $done: Boolean!) {
+  toggleTodoItem(todoId: $todoId, done: $done) {
+    id
+    name
+    done
+  }
+}
