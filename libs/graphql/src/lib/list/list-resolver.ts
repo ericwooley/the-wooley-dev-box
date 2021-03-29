@@ -40,4 +40,16 @@ export class ListResolver {
     await manager.save(list);
     return list;
   }
+
+  @Mutation(() => TodoItem)
+  async toggleTodoItem(
+    @Arg('todoId') id: number,
+    @Arg('done') done: boolean
+  ): Promise<TodoItem> {
+    const manager = getManager();
+    const todoItem = await manager.findOne(TodoItem, { id });
+    todoItem.done = done;
+    await manager.save(todoItem);
+    return todoItem;
+  }
 }

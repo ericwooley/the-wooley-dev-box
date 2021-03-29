@@ -3,8 +3,10 @@ import {
   useMyListsQuery,
   useCreateListMutation,
   useAddTodoItemMutation,
+  useToggleTodoItemMutation,
 } from '@the-wooley-devbox/graphql-sdk';
 export const TodoList = () => {
+  const [toggleTodoItem] = useToggleTodoItemMutation();
   const [createList] = useCreateListMutation();
   const [addTodoItem] = useAddTodoItemMutation();
   const { data, loading, error, refetch } = useMyListsQuery({ ssr: false });
@@ -44,7 +46,18 @@ export const TodoList = () => {
           <h4>{list.name} </h4>
           {list.items?.map((todo) => (
             <div key={todo.id}>
-              <input type="checkbox" checked={todo.done} />
+              <input
+                type="checkbox"
+                checked={todo.done}
+                onChange={(e) => {
+                  toggleTodoItem({
+                    variables: {
+                      done: e.target.checked,
+                      todoId: parseInt(todo.id, 10),
+                    },
+                  }).then(() => refetch());
+                }}
+              />
               &nbsp;
               <strong>{todo.name}</strong>
             </div>
