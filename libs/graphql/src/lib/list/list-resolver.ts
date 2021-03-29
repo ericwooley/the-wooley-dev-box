@@ -1,5 +1,5 @@
 import { Mutation, Query, Resolver, Arg } from 'type-graphql';
-import { List } from '@the-wooley-devbox/db';
+import { List, TodoItem } from '@the-wooley-devbox/db';
 import { getManager } from 'typeorm';
 @Resolver()
 export class ListResolver {
@@ -16,9 +16,27 @@ export class ListResolver {
   async createList(@Arg('name') name: string): Promise<List> {
     const list = new List();
     list.name = name;
-    list.items = [];
+    list.items = Promise.resolve([]);
 
     const manager = getManager();
+    await manager.save(list);
+    return list;
+  }
+
+  @Mutation(() => List)
+  async addTodoItem(
+    @Arg('listId') id: number,
+    @Arg('todoName') todoName: string
+  ): Promise<List> {
+    const manager = getManager();
+    const list = await manager.findOne(List, { id });
+    const todo = new TodoItem();
+    todo.name = todoName;
+    todo.done = false;
+    await manager.save(todo);
+    const items = await Promise.resolve(list.items || []);
+    items.push(todo);
+    list.items = Promise.resolve(items);
     await manager.save(list);
     return list;
   }

@@ -24,11 +24,18 @@ export type List = {
 export type Mutation = {
   __typename?: 'Mutation';
   createList: List;
+  addTodoItem: List;
 };
 
 
 export type MutationCreateListArgs = {
   name: Scalars['String'];
+};
+
+
+export type MutationAddTodoItemArgs = {
+  todoName: Scalars['String'];
+  listId: Scalars['Float'];
 };
 
 export type Query = {
@@ -73,6 +80,20 @@ export type CreateListMutation = (
       { __typename?: 'TodoItem' }
       & Pick<TodoItem, 'name' | 'id' | 'done'>
     )>> }
+  ) }
+);
+
+export type AddTodoItemMutationVariables = Exact<{
+  listId: Scalars['Float'];
+  todoName: Scalars['String'];
+}>;
+
+
+export type AddTodoItemMutation = (
+  { __typename?: 'Mutation' }
+  & { addTodoItem: (
+    { __typename?: 'List' }
+    & Pick<List, 'id' | 'name'>
   ) }
 );
 
@@ -156,3 +177,38 @@ export function useCreateListMutation(baseOptions?: Apollo.MutationHookOptions<C
 export type CreateListMutationHookResult = ReturnType<typeof useCreateListMutation>;
 export type CreateListMutationResult = Apollo.MutationResult<CreateListMutation>;
 export type CreateListMutationOptions = Apollo.BaseMutationOptions<CreateListMutation, CreateListMutationVariables>;
+export const AddTodoItemDocument = gql`
+    mutation addTodoItem($listId: Float!, $todoName: String!) {
+  addTodoItem(todoName: $todoName, listId: $listId) {
+    id
+    name
+  }
+}
+    `;
+export type AddTodoItemMutationFn = Apollo.MutationFunction<AddTodoItemMutation, AddTodoItemMutationVariables>;
+
+/**
+ * __useAddTodoItemMutation__
+ *
+ * To run a mutation, you first call `useAddTodoItemMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddTodoItemMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addTodoItemMutation, { data, loading, error }] = useAddTodoItemMutation({
+ *   variables: {
+ *      listId: // value for 'listId'
+ *      todoName: // value for 'todoName'
+ *   },
+ * });
+ */
+export function useAddTodoItemMutation(baseOptions?: Apollo.MutationHookOptions<AddTodoItemMutation, AddTodoItemMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddTodoItemMutation, AddTodoItemMutationVariables>(AddTodoItemDocument, options);
+      }
+export type AddTodoItemMutationHookResult = ReturnType<typeof useAddTodoItemMutation>;
+export type AddTodoItemMutationResult = Apollo.MutationResult<AddTodoItemMutation>;
+export type AddTodoItemMutationOptions = Apollo.BaseMutationOptions<AddTodoItemMutation, AddTodoItemMutationVariables>;

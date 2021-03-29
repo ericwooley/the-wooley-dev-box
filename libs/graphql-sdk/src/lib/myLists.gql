@@ -21,3 +21,10 @@ mutation createList($name: String!) {
     }
   }
 }
+
+mutation addTodoItem($listId: Float!, $todoName: String!) {
+  addTodoItem(todoName: $todoName, listId: $listId) {
+    id
+    name
+  }
+}
