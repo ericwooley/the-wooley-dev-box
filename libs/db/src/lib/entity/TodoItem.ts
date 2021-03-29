@@ -19,5 +19,5 @@ export class TodoItem {
 
   @Field(() => List)
   @ManyToOne(() => List, (list) => list.items)
-  list: typeof List;
+  list: Promise<List>;
 }
