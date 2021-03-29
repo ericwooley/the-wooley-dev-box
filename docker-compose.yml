@@ -1,11 +1,5 @@
 version: "3"
 services:
-  redis:
-    image: redis:6-alpine
-    ports:
-      - 6379:6379
-    restart: always
-
   postgres:
     image: postgres:12.5
     environment:
