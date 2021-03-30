@@ -1,7 +1,7 @@
 ```bash
 $ tree -I 'node_modules|.git' .
  ├── apps # apps glue our libs together
- │   ├── the-wooley-devbox # Our NextJS app
+ │   ├── web # Our NextJS app
  │   │   ├── index.d.ts # Custom Types for SVG
  │   │   ├── jest.config.js # app specific jest config
  │   │   ├── next.config.js # use this to customize next
