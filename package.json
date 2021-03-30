@@ -35,6 +35,7 @@
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
     "express": "4.17.1",
+    "framer-motion": "^4.0.3",
     "graphql": "^15.5.0",
     "graphql-tools": "^7.0.4",
     "next": "10.0.1",

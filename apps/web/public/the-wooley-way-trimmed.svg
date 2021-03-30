@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="149.28058mm" height="71.707512mm" viewBox="0 0 149.28058 71.707512" version="1.1" id="svg8" inkscape:version="1.0.2 (e86c870879, 2021-01-15)" sodipodi:docname="the-wooley-way-trimmed.svg">
+  <defs id="defs2">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath861">
+      <path d="M 0,2000 H 2000 V 0 H 0 Z" id="path859" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#5c5c5c" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:zoom="0.49497475" inkscape:cx="18.577314" inkscape:cy="423.44875" inkscape:document-units="mm" inkscape:current-layer="layer1" inkscape:document-rotation="0" showgrid="false" inkscape:window-width="1920" inkscape:window-height="1043" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" />
+  <metadata id="metadata5">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(-55.366318,-62.786651)">
+    <rect style="fill:#001b03;fill-opacity:1;stroke:#454545;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect833" width="84.900642" height="61.180317" x="56.866318" y="71.813843" ry="5.8533854" />
+    <text xml:space="preserve" style="font-size:10.5833px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#00e706;fill-opacity:1;stroke-width:0.264583" x="77.452545" y="93.568085" id="text841">
+      <tspan sodipodi:role="line" id="tspan839" x="77.452545" y="93.568085" style="fill:#00e706;fill-opacity:1;stroke-width:0.264583" />
+    </text>
+  </g>
+  <g inkscape:groupmode="layer" id="layer2" inkscape:label="Layer 2" style="opacity:1" transform="translate(-55.366318,-62.786651)">
+    <g id="g851" inkscape:label="vectorstock_30068267" transform="matrix(0.90550903,0,0,-0.9096035,-816.89694,957.15816)" style="fill:#001b03;fill-opacity:1">
+      <g id="g855" style="fill:#001b03;fill-opacity:1" transform="translate(2.89475,0.19253006)">
+        <g id="g857" clip-path="url(#clipPath861)" style="fill:#001b03;fill-opacity:1">
+          <g id="g942" transform="matrix(0.14101016,0,0,0.14101016,906.9957,782.17921)" style="fill:#001b03;fill-opacity:1">
+            <g id="g871" transform="translate(1120.3186,1367.4922)" style="fill:#001b03;fill-opacity:1">
+              <path d="m 0,0 c 0,0 2.045,19.959 12.465,28.426 0,0 -17.909,-3.908 -22.794,-9.769 4.233,12.048 19.767,39.517 56.66,29.632 7.326,6.349 31.91,17.097 57.797,-1.952 0,0 -14.116,-0.778 -19.538,-3.908 8.793,0 31.586,-2.44 46.564,-39.237 l -12.699,0.977 c 0,0 51.448,-126.667 59.263,-179.419 4.396,-29.667 8.379,-83.126 10.096,-131.299 -7.231,9.869 -16.09,15.228 -23.391,16.951 -15.815,3.731 -22.719,12.498 -39.314,6.142 -9.513,34.969 -18.219,72.225 -18.866,98.114 0,0 -20.952,7.62 -33.433,-5.633 -20.579,-20.579 -37.434,15.71 -28.329,38.185 0,0 -8.704,-11.968 -6.84,-30.542 -13.697,-0.868 -27.342,-4.717 -40.64,-10.566 1.832,39.127 -5.66,70.237 -17.224,94.597 14.377,-45.58 14.313,-109.696 -22.34,-197.679 l -8.369,-148.305 c 0,0 23.444,-6.369 26.374,-43.969 h -115.597 l -10.418,203.072 c 10.038,21.384 21.157,62.688 25.934,107.284 -14.466,-61.353 -42.486,-103.555 -42.486,-103.555 l -0.082,-38.75 c -53.236,-28.692 -117.247,-38.288 -191.171,-34.413 10.936,25.366 37.078,91.23 30.246,126.699 l -0.003,0.014 c -0.237,-1.941 -0.488,-3.88 -0.764,-5.817 -7.529,-52.681 -42.948,-106.771 -58.066,-132.748 l -16.606,-85.639 c 0,0 13.35,-9.289 13.35,-36.147 h -108.758 c 18.38,63.216 32.213,118.464 21.013,183.574 -4.841,28.135 -11.012,63.074 -8.464,97.756 6.303,85.811 72.139,109.732 140.539,137.84 49.023,20.146 107.652,42.371 151.037,53.318 31.488,7.946 60.94,14.066 87.723,15.159 18.835,0.768 41.309,-0.993 64.068,-1.143 v -0.003 c -8.202,-43.262 23.752,-64.577 23.752,-64.577 l 0.004,0.005 c -8.392,6.516 -15.3,20.712 -16.214,45.65 C -36.874,15.204 -13.511,8.399 0,0 m 188.23,-319.794 c 0.878,-32.168 0.613,-60.593 -1.395,-75.903 -10.512,-80.163 -98.861,-52.786 -83.034,5.535 0,0 22.113,0.486 28.788,-10.097 -1.627,-5.211 0.355,-14.161 6.054,-13.836 5.698,0.325 17.814,12.744 10.325,45.633 -3.04,13.359 -10.447,37.484 -18.257,64.915 17.487,-10.522 37.003,-16.07 57.519,-16.247" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path873" />
+            </g>
+            <g id="g927" style="fill:#001b03;fill-opacity:1">
+              <g id="g863" transform="translate(1328.0813,1049.1558)" style="fill:#001b03;fill-opacity:1">
+                <path d="m 0,0 c 43.409,-18.797 119.515,-20.655 162.932,4.519 52.386,30.376 78.286,89.199 34.676,132.043 6.187,-12.048 18.886,-50.797 -8.466,-82.708 C 163.866,24.365 113.156,0.415 45.952,16.162 31.546,8.172 16.042,2.513 0,0" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path865" />
+              </g>
+              <g id="g867" transform="translate(758.6717,999.0825)" style="fill:#001b03;fill-opacity:1">
+                <path d="m 0,0 c 10.474,-19.765 27.324,-60.879 27.324,-120.844 l 108.107,14.588 c 0,0 -6.186,30.282 -22.794,37.121 L 97.951,5.411 C 67.615,0.115 34.934,-1.487 0,0" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path869" />
+              </g>
+              <g id="g875" transform="translate(1189.3518,1173.3296)" style="fill:#001b03;fill-opacity:1">
+                <path d="m 0,0 c 0,0 25.073,-92.737 96.953,-109.698 97.04,-22.899 193.11,105.71 148.812,167.047 C 254.44,12.501 229.71,-26.483 196.141,-53.329 167.279,-76.412 129.72,-92.336 99.189,-78.764 67.091,-64.495 40.972,-22.689 37.21,8.821 24.389,14.685 9.245,12.681 0,0" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path877" />
+              </g>
+              <g id="g879" transform="translate(1154.7571,1171.0371)" style="fill:#001b03;fill-opacity:1">
+                <path d="m 0,0 c -0.717,-19.056 -3.341,-57.873 -12.855,-107.258 0,0 67.078,-79.972 48.843,-185.541 l -95.733,39.01 16.932,32.236 -25.715,29.307 5.876,88.666 c 8.288,17.247 23.953,69.471 24.735,91.353 0,0 28.475,11.477 37.917,12.227" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path881" />
+              </g>
+              <g id="g883" transform="translate(969.0071,890.6396)" style="fill:#001b03;fill-opacity:1">
+                <path d="M 0,0 C 198.989,0 375.296,-9.223 484.319,-23.416 H -484.318 C -375.294,-9.223 -198.987,0 0,0" style="fill:#001b03;fill-opacity:1;fill-rule:evenodd;stroke:none" id="path885" />
+              </g>
+            </g>
+          </g>
+          <g id="g887" transform="translate(452.2191,795.8643)" style="fill:#001b03;fill-opacity:1" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g inkscape:groupmode="layer" id="layer3" inkscape:label="Layer 3" transform="translate(-55.366318,-62.786651)">
+    <text xml:space="preserve" style="font-size:4.73681px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" x="65.034767" y="80.64093" id="text946">
+      <tspan sodipodi:role="line" id="tspan944" x="65.034767" y="80.64093" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1">➜ tree</tspan>
+      <tspan sodipodi:role="line" x="65.034767" y="86.561943" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan958">.</tspan>
+      <tspan sodipodi:role="line" x="65.034767" y="92.482956" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan948">└── the-wooley-way</tspan>
+      <tspan sodipodi:role="line" x="65.034767" y="98.403969" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan950">    └── the-wooley-devbox</tspan>
+      <tspan sodipodi:role="line" x="65.034767" y="104.32498" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan952" />
+      <tspan sodipodi:role="line" x="65.034767" y="110.24599" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan954">2 directories, 0 files</tspan>
+      <tspan sodipodi:role="line" x="65.034767" y="116.16701" style="font-size:4.73681px;fill:#00e706;fill-opacity:1;stroke:none;stroke-width:0.222038;stroke-opacity:1" id="tspan956" />
+    </text>
+  </g>
+</svg>

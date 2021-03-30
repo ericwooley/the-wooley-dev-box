@@ -20,10 +20,6 @@
 }
 
 .app header {
-  background-color: #143055;
-  color: white;
-  padding: 5px;
-  border-radius: 3px;
 }
 
 .app main {
@@ -125,4 +121,43 @@
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: #00e706;
+  outline: none;
+  border: 1px solid #00e706;
+  background-color: #001b03;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: ' ';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #00e706;
+  animation-name: strike;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
