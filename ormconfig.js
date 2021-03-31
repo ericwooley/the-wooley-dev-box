@@ -1,11 +1,8 @@
 const envDependentVars = process.env.DATABASE_URL
   ? {
       url: `${process.env.DATABASE_URL}`,
-      ssl: {
-        // DO NOT DO THIS
-        // set up your ca correctly to trust the connection
-        // rejectUnauthorized: false,
-      },
+      // https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-node-js
+      ssl: { rejectUnauthorized: false },
     }
   : {
       username: 'postgres',
