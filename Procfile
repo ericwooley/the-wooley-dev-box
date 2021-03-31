@@ -1,2 +1,2 @@
 web: yarn start
-release: yarn typeorm migration:run
+release: yarn install --frozen-lockfile && yarn typeorm migration:run
