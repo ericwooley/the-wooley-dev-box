@@ -47,7 +47,8 @@
     "tslib": "^2.0.0",
     "ts-node": "~9.1.1",
     "type-graphql": "^1.1.1",
-    "typeorm": "^0.2.31"
+    "typeorm": "^0.2.31",
+    "typescript": "~4.0.3"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -91,7 +92,6 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "jest": "26.2.2",
     "prettier": "2.2.1",
-    "ts-jest": "26.4.0",
-    "typescript": "~4.0.3"
+    "ts-jest": "26.4.0"
   }
 }
