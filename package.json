@@ -45,6 +45,7 @@
     "react-dom": "17.0.1",
     "reflect-metadata": "^0.1.13",
     "tslib": "^2.0.0",
+    "ts-node": "~9.1.1",
     "type-graphql": "^1.1.1",
     "typeorm": "^0.2.31"
   },
@@ -91,7 +92,6 @@
     "jest": "26.2.2",
     "prettier": "2.2.1",
     "ts-jest": "26.4.0",
-    "ts-node": "~9.1.1",
     "typescript": "~4.0.3"
   }
 }
