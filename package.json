@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
-    "start": "concurrently --names 'api,web' -c 'bgBlue.bold,bgMagenta.bold' 'nx serve api' 'nx serve web'",
-    "build": "nx build",
+    "start": "node ./dist/apps/api/main.js",
+    "dev": "concurrently --names 'api,web' -c 'bgBlue.bold,bgMagenta.bold' 'nx serve api' 'nx serve web'",
+    "build": "nx affected --target=build --base=main --skip-nx-cache --production",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "e2e": "nx e2e",
