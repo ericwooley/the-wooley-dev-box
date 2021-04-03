@@ -16,7 +16,7 @@ export class ListResolver {
   async createList(@Arg('name') name: string): Promise<List> {
     const list = new List();
     list.name = name;
-    list.items = [];
+    list.items = Promise.resolve([]);
 
     const manager = getManager();
     await manager.save(list);
